@@ -13,7 +13,10 @@ const FirstContextProvider = (props)=>{
 
     return (
         <FirstContext.Provider value ={{ userName,city,age,num,setnum }}>
+
+            {/* eslint-disable-next-line react/prop-types */}
             {props.children}
+            
         </FirstContext.Provider>
     );  
 }
