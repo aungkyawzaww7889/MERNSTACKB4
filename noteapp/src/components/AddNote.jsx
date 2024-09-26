@@ -33,11 +33,12 @@ const AddNote = ({showNoteHandler}) => {
 
   return (
     <>
-      <div className='flex justify-between items-center mb-2 pr-4'>
-        <h1 className='text-2xl font-bold mb-3'>Fire Note</h1>
-        <button className='p-2 bg-sky-600 text-white rounded-md hover:bg-sky-700' onClick={showNoteHandler}>Show Note</button> 
+    <form onSubmit={addNote} action="" method="" className='w-[450px] md:w-[500px] bg-sky-600 p-4'> 
+      <div className='flex justify-between items-center mb-2'>
+        <h1 className='text-2xl text-white font-bold mb-3'>Fire Note</h1>
+        <button className='p-2 bg-white rounded-md hover:bg-slate-300' onClick={showNoteHandler}>Show Note</button> 
       </div>
-      <form onSubmit={addNote} action="" method="" className='w-[450px] md:w-[500px] bg-sky-600 p-4'>
+      
         <div className='flex justify-between space-x-3'>
           <input type="text" className='w-full p-2 rounded-md outline-none'  onChange={inputvalue} value={note} placeholder='add note here' />
           <button type='submit' className='bg-white px-2 rounded-md text-sm flex-none hover:bg-white hover:text-sky-500'>Add Note</button>

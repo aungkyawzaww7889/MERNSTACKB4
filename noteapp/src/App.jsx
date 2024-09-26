@@ -7,9 +7,9 @@ function App() {
   const [notes,setNotes]  = useState([]);
 
   // စစချင်းအလုပ်လုပ်
-  // useEffect(()=>{
-  //   showNoteHandler();
-  // },[]);
+  useEffect(()=>{
+    showNoteHandler();
+  },[]);
 
   const showNoteHandler = async () =>{
     // console.log('hay');
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-     <section className='p-4'>
+     <section className='p-4 h-screen flex flex-col justify-center items-center'>
       <AddNote showNoteHandler={showNoteHandler}/>
 
       {
